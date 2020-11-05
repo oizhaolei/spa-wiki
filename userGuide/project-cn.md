@@ -61,7 +61,7 @@
 进入项目综合信息管理页面的方法有两种，一种是新建项目后会自动进入项目综合信息管理(参见1.2 新建项目)。
 另一种是在项目一览中，点击某一项目的项目编号，
 ![avatar](../images/userGuide/project/projListProjNo-cn.jpg)
-进入项目综合信息管理页面。此页面含有总览、工作流、工单、活动、备注和设置共六个子功能页面。
+进入项目综合信息管理页面。此页面含有总览、工作流、工单、活动、备注、设置和台账共七个子功能页面。
 ![avatar](../images/userGuide/project/projView-cn.jpg)
 
 ####1.4.1 总览
@@ -101,6 +101,7 @@
 ####1.4.2 工作流
 在项目综合信息管理页面，点击 <u>工作流</u> 标签页，即可进入工作流一览页面。
 ![avatar](../images/userGuide/project/projViewFlowTag-cn.jpg)
+在一览画面上有标签按钮，在一览里有标签一列，关于标签的说明，请参见1.4.6.3.1-工作流标签。
 ![avatar](../images/userGuide/project/projViewFlowList-cn.jpg)
 
 #####1.4.2.1 工作流新建
@@ -1051,6 +1052,7 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ####1.4.3 工单
 在项目综合信息管理页面，点击 <u>工单</u> 标签页，即可进入工单一览页面。
 ![avatar](../images/userGuide/project/projViewTicketTag-cn.jpg)
+在一览画面上有标签按钮(一览右上方)，在一览里有标签一列，关于标签的说明，请参见1.4.6.3.2-工单标签。
 ![avatar](../images/userGuide/project/projViewTicketList-cn.jpg)
 
 #####1.4.3.1 工单新建
@@ -1149,16 +1151,55 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 进入工单填写画面。可以根据工作进度填写工单。
 ![avatar](../images/userGuide/project/projViewTicketFillIn-cn.jpg)
 
-#####1.4.3.6  工作流图里的进度显示
+#####1.4.3.6 为工单中的节点添加备注
+在工单进行过程中或工单终了后，可以给各节点添加备注信息，需要注意有两点：
+一是一个节点可添加多个备注，二是已完成的节点也可以添加备注。
+
+若要对某节点添加备注，则点击其节点右上方的<u>...</u>菜单。
+![avatar](../images/userGuide/project/projViewTicketNodeMenuAddComment-cn.jpg)
+在弹出的菜单列表中，点击备注。
+![avatar](../images/userGuide/project/projViewTicketNodeCommentMenu-cn.jpg)
+工作节点下端出现一个备注输入框和添加备注按钮。
+![avatar](../images/userGuide/project/projViewTicketNodeAddCommentInputBox-cn.jpg)
+输入备注后，点击添加备注按钮。
+![avatar](../images/userGuide/project/projViewTicketNodeInputComment-cn.jpg)
+备注被保存并显示在工作节点下端。
+![avatar](../images/userGuide/project/projViewTicketNodeSavedComment-cn.jpg)
+
+#####1.4.3.7 从指定节点重新开始工单
+与工单暂停后的再开不同，此处的再开，是对正在进行的工单或已终了的工单，从指点节点重新开始。
+正在进行的工单的重开，与终了工单的重开，二者的操作略有不同，下面分别说明。
+
+######1.4.3.7.1 重开正在进行的工单
+如下图，是正在进行的工单，且已进行到第四步的报告负责人。
+![avatar](../images/userGuide/project/projViewTicketReOpenDoing-cn.jpg)
+若要从第二步的输入处理日期重新开始，则点击此节点右上方的<u>...</u>菜单。
+![avatar](../images/userGuide/project/projViewTicketReOpenNodeMenu-cn.jpg)
+从弹出的菜单列表中，点击从这里重新开始。
+![avatar](../images/userGuide/project/projViewTicketReOpenNodeMenuReStart-cn.jpg)
+在工单的最下面，会增加一个要重新开始的节点。由此节点，工单重新开始。
+![avatar](../images/userGuide/project/projViewTicketAddedReOpenNode-cn.jpg)
+
+######1.4.3.7.2 重开已经终了的工单
+已经终了的工单，各个节点的<u>...</u>菜单中，没有<u>从这里重新开始</u>。
+![avatar](../images/userGuide/project/projViewTicketReOpenDoneStatus-cn.jpg)
+对于已经终了的工单，首先点击页面右上方的再开按钮。
+![avatar](../images/userGuide/project/projViewTicketResurrectBtn-cn.jpg)
+工单状态变为正在进行，且各节点的<u>...</u>菜单里也重新显示从这里重新开始。
+![avatar](../images/userGuide/project/projViewTicketReOpenDoneResurrectMenu-cn.jpg)
+之后的操作与1.4.3.7.1的重开正在进行的工单相同。
+选择要重新开始的节点，点击其<u>...</u>菜单里中的从这里重新开始即可。
+
+#####1.4.3.8  工作流图里的进度显示
 工单画面中的工作流图，可以显示当前的工作进度。
 灰色的为尚未开始的步骤，而非灰色则是已经完成或已经开始的工作步骤。
 ![avatar](../images/userGuide/project/projViewTicketDiagramStatus-cn.jpg)
 
-#####1.4.3.7  当前已进行的步骤列表
+#####1.4.3.9  当前已进行的步骤列表
 在步骤详细和工作流图的右端，有当前已完成或已开始的步骤的列表。由此可知当前的工作进度。
 ![avatar](../images/userGuide/project/projViewTicketDoneStepList-cn.jpg)
 
-#####1.4.3.8 工单删除
+#####1.4.3.10 工单删除
 点击要删除的工单前面的复选框。
 ![avatar](../images/userGuide/project/projViewTicketListChkbox-cn.jpg)
 工单一览上面出现选中件数和删除按钮。
@@ -1339,6 +1380,7 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewSetLabelInit-cn.jpg)
 
 ######1.4.6.3.1 工作流标签
+工作流标签，其用途是以自定义的标签对工作流进行分类。由此可以通过标签快速检索工作流。
 (1) 添加标签
 点击添加按钮
 ![avatar](../images/userGuide/project/projViewSetLabAddBtn-cn.jpg)
@@ -1370,6 +1412,75 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewSetFlowLabDelBtn-cn.jpg)
 被删除的标签从一览中消失。
 ![avatar](../images/userGuide/project/projViewSetFlowLabDeled-cn.jpg)
+
+(4) 为工作流添加标签
+首先点击工作流标签页，进入工作流一览页面。
+![avatar](../images/userGuide/project/projViewFlowTagFromFlowLab-cn.jpg)
+在工作流一览中，选择要设置标签的工作流(可单数、可复数)。
+![avatar](../images/userGuide/project/projViewSelecteLabFlowInList-cn.jpg)
+选中工作流后，一览上方出现一个蓝色矩形框，其中有选中件数、标签按钮和删除按钮。
+![avatar](../images/userGuide/project/projViewSelectedLabFlowInList-cn.jpg)
+点击蓝色框中的标签按钮。
+![avatar](../images/userGuide/project/projViewFlowListLabSetBtn-cn.jpg)
+弹出可供选择的标签列表(列表的内容是项目设置中的标签设置里所设定的)。
+![avatar](../images/userGuide/project/projViewFlowListLabSetList-cn.jpg)
+在标签列表里点击要设置的标签(可单数、可复数)。
+![avatar](../images/userGuide/project/projViewFlowListSelectLab-cn.jpg)
+点击后，被点击的标签前出现对号，说明被选中。若要去掉已选中的标签，则再次点击即可。
+![avatar](../images/userGuide/project/projViewFlowListSelectedLab-cn.jpg)
+把光标移出标签列表外，在页面任意空白处，点击鼠标。
+![avatar](../images/userGuide/project/projViewFlowSelectedLabMoveCursor-cn.jpg)
+工作流标签设定完成。
+![avatar](../images/userGuide/project/projViewFlowSetedLab-cn.jpg)
+
+(5) 修改工作流的标签
+修改工作流的标签，和给工作流添加标签的操作相同。首先选中要修改的工作流。
+![avatar](../images/userGuide/project/projViewSelectedEditLabFlowInList-cn.jpg)
+点击一览上方的标签按钮,弹出可供选择的标签列表。
+![avatar](../images/userGuide/project/projViewFlowListLabEditList-cn.jpg)
+在标签列表里重新选择要设置的标签(可单数、可复数)。
+![avatar](../images/userGuide/project/projViewFlowListReSelectedLab-cn.jpg)
+把光标移出标签列表外，在页面任意空白处，点击鼠标。
+![avatar](../images/userGuide/project/projViewFlowReSelectedLabMoveCursor-cn.jpg)
+工作流的标签被修改。
+![avatar](../images/userGuide/project/projViewFlowReSetedLab-cn.jpg)
+
+(6) 删除工作流的标签
+若要删除工作流的标签，直接点击标签列里标签后边的叉号即可。
+如下图，要删除第二条(RandomTest)的question标签，则点击question标签后面的叉号。
+![avatar](../images/userGuide/project/projViewFlowSelectDelFlowLab-cn.jpg)
+要删除的标签消失。
+![avatar](../images/userGuide/project/projViewFlowDeletedLab-cn.jpg)
+
+(7) 设置工作流的标签过滤器
+通过标签，可以过滤特定标签的工作流。点击页面上的标签按钮(紧邻新建按钮左边)。
+![avatar](../images/userGuide/project/projViewFlowListLabSelectBtn-cn.jpg)
+弹出可选择的工作流标签列表。
+![avatar](../images/userGuide/project/projViewFlowListLabSelectList-cn.jpg)
+从标签列表中点击要选择的标签(可单数、可复数，多个标签时各标签的过滤是或的关系)。
+![avatar](../images/userGuide/project/projViewFlowListSelectFilterLab-cn.jpg)
+点击后，被点击的标签前出现对号，说明被选中。若要去掉已选中的标签，则再次点击即可。
+![avatar](../images/userGuide/project/projViewFlowListSelectedFilterLab-cn.jpg)
+把光标移出标签列表外，在页面任意空白处，点击鼠标。
+![avatar](../images/userGuide/project/projViewFlowSelectedFilterLabMoveCursor-cn.jpg)
+一览上方会显示所选择的过滤标签，且一览中仅显示所选标签的工作流(多个标签时各标签是或的关系)。
+![avatar](../images/userGuide/project/projViewFlowSelectedByLab-cn.jpg)
+
+(8) 修改工作流的标签过滤
+要修改已设置的标签过滤器，则再次点击标签按钮。
+![avatar](../images/userGuide/project/projViewFlowListLabReSelectBtn-cn.jpg)
+弹出可选择的工作流标签列表。构成现在的过滤器的标签处于选中状态。
+![avatar](../images/userGuide/project/projViewFlowListLabReSelectList-cn.jpg)
+重新选择标签。
+![avatar](../images/userGuide/project/projViewFlowListReSelectFilterLab-cn.jpg)
+把光标移出标签列表外，在页面任意空白处，点击鼠标。标签过滤器修改完成，一览数据也相应改变。
+![avatar](../images/userGuide/project/projViewFlowReSelectedByLab-cn.jpg)
+
+(9) 删除标签过滤器中的标签
+对于现有的标签过滤器，若想删除其中的部分标签(全部删除亦可)，则可点击标签后面的叉号。
+![avatar](../images/userGuide/project/projViewFlowLabFilterDelLabBtn-cn.jpg)
+删除的标签消失，一览数据也相应改变。
+![avatar](../images/userGuide/project/projViewFlowLabFilterDeletedLab-cn.jpg)
 
 ######1.4.6.3.2 工单标签
 在标签画面，点击<u>工单</u>，即可进入工单的标签设定画面。
@@ -1408,14 +1519,53 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 被删除的标签从一览中消失。
 ![avatar](../images/userGuide/project/projViewSetTicketLabDeled-cn.jpg)
 
+(4) 工单标签的使用
+工单标签的使用方法，与工作流的相同，请参照工作流标签的说明。
 
+####1.4.7 台账
+台账，可以将本地的CSV数据导入其中并显示。
 
+####1.4.7.1 新建台账
+点击画面右上的添加台账按钮。注意台账是可以有多个的。
+![avatar](../images/userGuide/project/projViewAddLedgerBtn-cn.jpg)
+出现台账标题输入对话框。
+![avatar](../images/userGuide/project/projViewNewLedgerTitle-cn.jpg)
+输入台账标题后，点击OK按钮(若想放弃创建台账，则点击取消按钮)。
+![avatar](../images/userGuide/project/projViewInputLedgerTitle-cn.jpg)
+出现一个台账标签页面，点击此台账标签。
+![avatar](../images/userGuide/project/projViewAddedEmptyLedger-cn.jpg)
+新建的台账，是一个没有数据的空台账。之后通过上传csv来导入数据。
+![avatar](../images/userGuide/project/projViewEmptyLedger-cn.jpg)
 
+####1.4.7.2 导入csv数据
+台账里的数据，是通过导入csv而来的。
+点击上传按钮。
+![avatar](../images/userGuide/project/projViewLedgerUpLoadBtn-cn.jpg)
+弹出文件选择对话框。
+![avatar](../images/userGuide/project/projViewLedgerSelFileDlg-cn.jpg)
+选择要导入的csv文件后，点击打开。
+![avatar](../images/userGuide/project/projViewLedgerSelectedCsvFile-cn.jpg)
+![avatar](../images/userGuide/project/projViewLedgerUploadCsvContent-cn.jpg)
+csv文件的内容导入至台账里。
+![avatar](../images/userGuide/project/projViewLedgerUploadedCsv-cn.jpg)
 
+####1.4.7.2 下载台账数据
+在台账中显示的数据，可以下载到本地电脑。
+点击下载按钮。
+![avatar](../images/userGuide/project/projViewLedgerDownLoadBtn-cn.jpg)
+下载完成后，点击文件旁边的小箭头。
+![avatar](../images/userGuide/project/projViewLedgerDownLoadedCsv-cn.jpg)
+弹出的菜单中，选择在文件夹中显示。
+![avatar](../images/userGuide/project/projViewLedgerShowDownloadFileInFld-cn.jpg)
+打开文件所在文件夹。
+![avatar](../images/userGuide/project/projViewLedgerDownloadFileInFld-cn.jpg)
+打开文件确认内容。
+![avatar](../images/userGuide/project/projViewLedgerDownloadFileContent-cn.jpg)
 
-
-
-
-
-
-
+####1.4.7.3 删除台账
+要删除台账，则点击台账页面里的删除按钮即可。
+![avatar](../images/userGuide/project/projViewLedgerDelBtn-cn.jpg)
+弹出台账删除确认对话框，点击OK按钮即可(若想放弃删除，则点击取消按钮)。
+![avatar](../images/userGuide/project/projViewLedgerDelConfirmDlg-cn.jpg)
+台账被删除。注意删除台账，不仅是删除其中的数据，而且台账页面自身也被删除。
+![avatar](../images/userGuide/project/projViewLedgerDeleted-cn.jpg)
