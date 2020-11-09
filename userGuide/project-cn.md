@@ -333,7 +333,7 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 在流程图名称输入框中，修改流程图名称。
 ![avatar](../images/userGuide/project/projViewFlowEditorFlowNameOld-cn.jpg)
 ![avatar](../images/userGuide/project/projViewFlowEditorFlowNameNew-cn.jpg)
-点击设定关闭按钮(X按钮)，或者单击工作流编辑区空白处。
+点击设定关闭按钮(✕按钮)，或者单击工作流编辑区空白处。
 ![avatar](../images/userGuide/project/projViewFlowEditorFlowSetCloseBtn-cn.jpg)
 设定页面关闭，之后点击保存到云。
 ![avatar](../images/userGuide/project/projViewFlowEditorSaveFlowNameToClound-cn.jpg)
@@ -503,7 +503,7 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewFlowEditorWordsLinkDlg-cn.jpg)
 输入链接地址。
 ![avatar](../images/userGuide/project/projViewFlowEditorWordsLinkUrl-cn.jpg)
-点击对号(若想放弃输入，则点击X号。)
+点击对号✔(若想放弃输入，则点击✕号。)
 ![avatar](../images/userGuide/project/projViewFlowEditorWordsLinkDlgOkBtn-cn.jpg)
 链接添加完成。
 ![avatar](../images/userGuide/project/projViewFlowEditorWordsLinkNewed-cn.jpg)
@@ -518,7 +518,7 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewFlowEditorWordsLinkEditDlgEditable-cn.jpg)
 输入新的链接地址。
 ![avatar](../images/userGuide/project/projViewFlowEditorWordsLinkEdit-cn.jpg)
-之后点击对号(若想放弃修改，则点击X号)。
+之后点击对号✔(若想放弃修改，则点击✕号)。
 ![avatar](../images/userGuide/project/projViewFlowEditorWordsLinkEditDlgOkBtn-cn.jpg)
 链接修改完成。
 ![avatar](../images/userGuide/project/projViewFlowEditorWordsLinkEdited-cn.jpg)
@@ -604,7 +604,7 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewFlowEditorContentImgAlternativeTextDlg-cn.jpg)
 输入替代文字。
 ![avatar](../images/userGuide/project/projViewFlowEditorContentInputImgAlternativeText-cn.jpg)
-点击文字输入对话框的对号(若想放弃替代文字的设置，则点击X号)。
+点击文字输入对话框的对号✔(若想放弃替代文字的设置，则点击✕号)。
 ![avatar](../images/userGuide/project/projViewFlowEditorContentImgAlternativeTextDlgOkBtn-cn.jpg)
 图片加载失败替代文字设置完成。
 ![avatar](../images/userGuide/project/projViewFlowEditorContentImgSetedAlternativeText-cn.jpg)
@@ -1338,7 +1338,7 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewSetMemInvitedUserPermitSelList-cn.jpg)
 从权限列表中，单点要添加的权限，即可将其加入。可多选。选中的权限右侧将显示✓。
 ![avatar](../images/userGuide/project/projViewSetMemInvitedUserPermitSeled-cn.jpg)
-若要删除已经添加的权限，可以点击权限旁边的 <u>x</u> ,即可将其删除。
+若要删除已经添加的权限，可以点击权限后边的 <u>✕</u> ,即可将其删除。
 ![avatar](../images/userGuide/project/projViewSetMemInvitedUserPermitDelX-cn.jpg)
 ![avatar](../images/userGuide/project/projViewSetMemInvitedUserPermitDeledX-cn.jpg)
 或者在下拉列表中，再次单击已选权限，单击后其右侧的✓将消失，表示此权限已被排除。
@@ -1374,13 +1374,13 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewSetMemGrpRemoved-cn.jpg)
 
 #####1.4.6.3 标签
+标签，其用途是以自定义标签对数据进行分类，可以灵活快速的检索过滤数据。
 点击<u>标签</u>。
 ![avatar](../images/userGuide/project/projViewSetLabelTag-cn.jpg)
 标签，又分为工作流标签和工单标签2个部分。
 ![avatar](../images/userGuide/project/projViewSetLabelInit-cn.jpg)
 
 ######1.4.6.3.1 工作流标签
-工作流标签，其用途是以自定义的标签对工作流进行分类。由此可以通过标签快速检索工作流。
 (1) 添加标签
 点击添加按钮
 ![avatar](../images/userGuide/project/projViewSetLabAddBtn-cn.jpg)
@@ -1426,7 +1426,7 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewFlowListLabSetList-cn.jpg)
 在标签列表里点击要设置的标签(可单数、可复数)。
 ![avatar](../images/userGuide/project/projViewFlowListSelectLab-cn.jpg)
-点击后，被点击的标签前出现对号，说明被选中。若要去掉已选中的标签，则再次点击即可。
+点击后，被点击的标签前出现对号(✔)，说明被选中。若要去掉已选中的标签，则再次点击即可。
 ![avatar](../images/userGuide/project/projViewFlowListSelectedLab-cn.jpg)
 把光标移出标签列表外，在页面任意空白处，点击鼠标。
 ![avatar](../images/userGuide/project/projViewFlowSelectedLabMoveCursor-cn.jpg)
@@ -1459,7 +1459,7 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewFlowListLabSelectList-cn.jpg)
 从标签列表中点击要选择的标签(可单数、可复数，多个标签时各标签的过滤是或的关系)。
 ![avatar](../images/userGuide/project/projViewFlowListSelectFilterLab-cn.jpg)
-点击后，被点击的标签前出现对号，说明被选中。若要去掉已选中的标签，则再次点击即可。
+点击后，被点击的标签前出现对号(✔)，说明被选中。若要去掉已选中的标签，则再次点击即可。
 ![avatar](../images/userGuide/project/projViewFlowListSelectedFilterLab-cn.jpg)
 把光标移出标签列表外，在页面任意空白处，点击鼠标。
 ![avatar](../images/userGuide/project/projViewFlowSelectedFilterLabMoveCursor-cn.jpg)
@@ -1553,7 +1553,7 @@ csv文件的内容导入至台账里。
 在台账中显示的数据，可以下载到本地电脑。
 点击下载按钮。
 ![avatar](../images/userGuide/project/projViewLedgerDownLoadBtn-cn.jpg)
-下载完成后，点击文件旁边的小箭头。
+下载完成后，在文件下载状态条中点击文件旁边的小箭头。
 ![avatar](../images/userGuide/project/projViewLedgerDownLoadedCsv-cn.jpg)
 弹出的菜单中，选择在文件夹中显示。
 ![avatar](../images/userGuide/project/projViewLedgerShowDownloadFileInFld-cn.jpg)

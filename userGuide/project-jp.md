@@ -63,7 +63,7 @@
 一つはプロジェクトを新規したら、プロジェクト総合情報管理画面に遷移されます(1.2プロジェクト新規を参照)。
 もう一つはプロジェクト一覧にプロジェクト番号のリンクをクリックします。
 ![avatar](../images-jp/userGuide/project/projListProjNo-jp.jpg)
-プロジェクト総合情報管理画面に概要、フロー、チケット、アクティビティ、メモ、設定の六つの子画面があります。
+プロジェクト総合情報管理画面に概要、フロー、チケット、アクティビティ、メモ、設定と台帳の七つの子画面があります。
 ![avatar](../images-jp/userGuide/project/projView-jp.jpg)
 
 ####1.4.1 概要
@@ -1175,16 +1175,54 @@ OKボタンをクリックします(移動を放棄する場合に、キャン�
 チケット記入画面が表示されます。チケットを記入していいです。
 ![avatar](../images-jp/userGuide/project/projViewTicketFillIn-jp.jpg)
 
-#####1.4.3.6 フロー図で進捗を確認します
+#####1.4.3.6 チケットでノードにコメントを追加します
+対応中又は終了のチケットで、各ノードにコメントを追加出来ます。
+注意するのは一ノードに複数のコメントを追加でき、完了ノードにもコメントを追加できます。
+
+ノードにコメントを追加するには、まずノードの右上の<u>...</u>メニューをクリックします。
+![avatar](../images-jp/userGuide/project/projViewTicketNodeMenuAddComment-jp.jpg)
+メニューリストが表示され、中からコメントをクリックします。
+![avatar](../images-jp/userGuide/project/projViewTicketNodeCommentMenu-jp.jpg)
+ノードの下の方にテキストボックスとコメント追加ボタンが表示されます。
+![avatar](../images-jp/userGuide/project/projViewTicketNodeAddCommentInputBox-jp.jpg)
+コメントを入力してから、コメント追加ボタンをクリックします。
+![avatar](../images-jp/userGuide/project/projViewTicketNodeInputComment-jp.jpg)
+追加したコメントがノードの下の方に表示されます。
+![avatar](../images-jp/userGuide/project/projViewTicketNodeSavedComment-jp.jpg)
+
+#####1.4.3.7 指定ノードからチケットを再開します
+一時停止のチケットを再開することと異なり、ここの再開は対応中と終了のチケットを再開します。
+対応中のチケットの再開と終了のチケットの再開とで、操作的に少し違いがありますので、下記で別別に説明します。
+
+######1.4.3.7.1 対応中のチケットを再開します
+下図の通りで、対応中のチケットの進捗は、四ノード目の関係者に送信までに達します。
+![avatar](../images-jp/userGuide/project/projViewTicketReOpenDoing-jp.jpg)
+もし二ノード目の処理日入力から再開とすれば、このノードの右上の<u>...</u>メニューをクリックします。
+![avatar](../images-jp/userGuide/project/projViewTicketReOpenNodeMenu-jp.jpg)
+メニューリストが表示され、中にここから再開をクリックします。
+![avatar](../images-jp/userGuide/project/projViewTicketReOpenNodeMenuReStart-jp.jpg)
+チケットの一番下に、再開の開始ノードが追加され、この新ノードから、チケットが再開されます。
+![avatar](../images-jp/userGuide/project/projViewTicketAddedReOpenNode-jp.jpg)
+
+######1.4.3.7.2 終了のチケットを再開します
+終了のチケットは、各ノードの<u>...</u>のメニューリストに、ここから再開が表示されません。
+![avatar](../images-jp/userGuide/project/projViewTicketReOpenDoneStatus-jp.jpg)
+終了のチケット場合に、まず画面の右上の復活ボタンをクリックします
+![avatar](../images-jp/userGuide/project/projViewTicketResurrectBtn-jp.jpg)
+チケット状態は対応中となり、各ノードの<u>...</u>のメニューリストにここから再開が再表示されます。
+![avatar](../images-jp/userGuide/project/projViewTicketReOpenDoneResurrectMenu-jp.jpg)
+後の操作は1.4.3.7.1-対応中のチケットの再開と同じで、再開の開始ノードで<u>...</u>のメニューリストから再開をクリックすると再開されます。
+
+#####1.4.3.8 フロー図で進捗を確認します
 チケット画面中のフロー図で、これまでの作業進捗を表示できます。
 灰色の段階は未着手で、以外は終わり又は着手です。
 ![avatar](../images-jp/userGuide/project/projViewTicketDiagramStatus-jp.jpg)
 
-#####1.4.3.7 進捗リスト
+#####1.4.3.9 進捗リスト
 作業詳細とフロー図の右の方に、これまで終わった又は開始した段階のリストがあります。これで進捗が確認出来ます。
 ![avatar](../images-jp/userGuide/project/projViewTicketDoneStepList-jp.jpg)
 
-#####1.4.3.8 チケット削除
+#####1.4.3.10 チケット削除
 消すチケット前のチェックボックスをチェックオンします。
 ![avatar](../images-jp/userGuide/project/projViewTicketListChkbox-jp.jpg)
 チケット一覧の上に選択した件数を削除ボタンが表示されます。
@@ -1367,6 +1405,7 @@ OKボタンをクリックします(移動を放棄する場合に、キャン�
 ![avatar](../images-jp/userGuide/project/projViewSetMemGrpRemoved-jp.jpg)
 
 #####1.4.6.3 ラベル
+ラベルの使い道は、ユーザーがカスタマイズしたラベルでデータを分類します。これでデータ検索を柔軟的に行われます。
 設定画面の左側の<u>ラベル</u>タグをクリックします。
 ![avatar](../images-jp/userGuide/project/projViewSetLabelTag-jp.jpg)
 ラベル画面が表示されます。ラベルはフローラベルとチケットラベルの両部分に分かられます。
@@ -1405,6 +1444,80 @@ OKボタンをクリックします(移動を放棄する場合に、キャン�
 消したラベルがラベル一覧に無くなりました。
 ![avatar](../images-jp/userGuide/project/projViewSetFlowLabDeled-jp.jpg)
 
+(4) フローにラベルを付けます
+まずフロータグをクリックし、フロー一覧画面が表示されます。
+![avatar](../images-jp/userGuide/project/projViewFlowTagFromFlowLab-jp.jpg)
+フロー一覧から、ラベルを付けるフローを選びます。
+![avatar](../images-jp/userGuide/project/projViewSelecteLabFlowInList-jp.jpg)
+フローを幾つか選択したら、一覧の上に青い枠が表示され、中に選択件数、ラベルボタンと削除ボタンがあります。
+![avatar](../images-jp/userGuide/project/projViewSelectedLabFlowInList-jp.jpg)
+ラベルボタンをクリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowListLabSetBtn-jp.jpg)
+ラベルリストが表示されます(ラベルリスト中の項目は、設定→一般→ラベル→フローラベルで作成されたものです)。
+![avatar](../images-jp/userGuide/project/projViewFlowListLabSetList-jp.jpg)
+ラベルリストからフローに付けるラベルをクリックします(複数でもいい)。
+![avatar](../images-jp/userGuide/project/projViewFlowListSelectLab-jp.jpg)
+クリックしたラベルの前にチェックマーク(✔)が表示され、このラベルが選択済状態となります。
+選択済みのラベルを外すには、そのラベルを再クリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowListSelectedLab-jp.jpg)
+カーソルをラベルリストから離し、画面の空白の箇所でマウスをクリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowSelectedLabMoveCursor-jp.jpg)
+フローへのラベル付けが終わりです。
+![avatar](../images-jp/userGuide/project/projViewFlowSetedLab-jp.jpg)
+
+(5) フローラベルの編集
+フローラベルの編集は、フローにラベルを付ける操作と同じで、まず編集するフローを選択します。
+![avatar](../images-jp/userGuide/project/projViewSelectedEditLabFlowInList-jp.jpg)
+一覧上のラベルボタンをクリックし、ラベルリストが表示されます。
+![avatar](../images-jp/userGuide/project/projViewFlowListLabEditList-jp.jpg)
+ラベルリストから新たにラベルを選択します。
+![avatar](../images-jp/userGuide/project/projViewFlowListReSelectedLab-jp.jpg)
+カーソルをラベルリストから離し、画面の空白の箇所でマウスをクリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowReSelectedLabMoveCursor-jp.jpg)
+フローのラベルが直されます。
+![avatar](../images-jp/userGuide/project/projViewFlowReSetedLab-jp.jpg)
+
+(6) フローのラベルを消します
+フローのラベルを消すには、ラベルの後ろにある×をクリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowSelectDelFlowLab-jp.jpg)
+消すラベルが無くなります。
+![avatar](../images-jp/userGuide/project/projViewFlowDeletedLab-jp.jpg)
+
+(7) ラベルフィルターを設定します
+ラベルフィルターで指定ラベルを持つフローを洗い出せます。
+
+(新規ボタンの左側にある)ラベルボタンをクリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowListLabSelectBtn-jp.jpg)
+ラベルリストが表示されます。
+![avatar](../images-jp/userGuide/project/projViewFlowListLabSelectList-jp.jpg)
+ラベルリストからフィルターを構成するラベルをクリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowListSelectFilterLab-jp.jpg)
+クリックしたラベルの前にチェックマーク(✔)が表示され、このラベルが選択済状態となります。
+選択済みのラベルを外すには、そのラベルを再クリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowListSelectedFilterLab-jp.jpg)
+カーソルをラベルリストから離し、画面の空白の箇所でマウスをクリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowSelectedFilterLabMoveCursor-jp.jpg)
+一覧の上にフィルターのラベルが表示され、一覧にフィルターのラベルを持つフローだけが表示されます。
+ラベルが複数の場合に、各ラベルの間に又は(OR)のロジックです。
+![avatar](../images-jp/userGuide/project/projViewFlowSelectedByLab-jp.jpg)
+
+(8) ラベルフィルターを直します
+ラベルフィルターを直すには、まずラベルボタンを再クリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowListLabReSelectBtn-jp.jpg)
+ラベルリストが表示され、初期はフィルターを構成したラベルが選択済み状態となります。
+![avatar](../images-jp/userGuide/project/projViewFlowListLabReSelectList-jp.jpg)
+フィルターのラベルを新たに選択します。
+![avatar](../images-jp/userGuide/project/projViewFlowListReSelectFilterLab-jp.jpg)
+カーソルをラベルリストから離し、画面の空白の箇所でマウスをクリックします。
+ラベルフィルターが直され、新フィルターに該当するデータが一覧に再表示されます。
+![avatar](../images-jp/userGuide/project/projViewFlowReSelectedByLab-jp.jpg)
+
+(9) フィルターのラベルを消します
+フィルターのラベルを一部消す(全部削除も可能)には、ラベルの後ろにある×をクリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowLabFilterDelLabBtn-jp.jpg)
+消すラベルが無くなり、残りのラベルに該当するデータが一覧に再表示されます。
+![avatar](../images-jp/userGuide/project/projViewFlowLabFilterDeletedLab-jp.jpg)
+
 ######1.4.6.3.2 チケットラベル
 ラベル設定画面で、<u>チケット</u>タグをクリックします。チケットラベル設定画面が表示されます。
 ![avatar](../images-jp/userGuide/project/projViewSetTicketLabTag-jp.jpg)
@@ -1442,17 +1555,56 @@ OKボタンをクリックします(移動を放棄する場合に、キャン�
 消したラベルがラベル一覧に無くなりました。
 ![avatar](../images-jp/userGuide/project/projViewSetTicketLabDeled-jp.jpg)
 
+(4) チケットラベルの使い道
+チケットラベルの使い道は、フローラベルと同じで、フローラベルの使い道の説明を参照となります。
 
+####1.4.7 台帳
+台帳は、ローカルにあるCSVファイルのデータをインポートできます。
 
+####1.4.7.1 台帳新規
+画面右上の台帳追加ボタンをクリックします。注意するのは台帳が複数でいいです。
+![avatar](../images-jp/userGuide/project/projViewAddLedgerBtn-jp.jpg)
+台帳名前入力ダイアログボックスが表示されます。
+![avatar](../images-jp/userGuide/project/projViewNewLedgerTitle-jp.jpg)
+台帳名前を入力してからOKボタンをクリックします(台帳新規を放棄する場合にキャンセルボタンをクリックします)。
+![avatar](../images-jp/userGuide/project/projViewInputLedgerTitle-jp.jpg)
+新しい台帳タグ画面が表示され、この台帳タグをクリックします。
+![avatar](../images-jp/userGuide/project/projViewAddedEmptyLedger-jp.jpg)
+新規台帳にまだデータが無し、csvファイルをアップロードすることでデータをインポートします。
+![avatar](../images-jp/userGuide/project/projViewEmptyLedger-jp.jpg)
 
+####1.4.7.2 Csvファイルデータをインポートします
+アップロードボタンをクリックします。
+![avatar](../images-jp/userGuide/project/projViewLedgerUpLoadBtn-jp.jpg)
+ファイル選択ダイアログボックスが表示されます。
+![avatar](../images-jp/userGuide/project/projViewLedgerSelFileDlg-jp.jpg)
+インポートするcsvファイルを選択してから、開くボタンをクリックします。
+![avatar](../images-jp/userGuide/project/projViewLedgerSelectedCsvFile-jp.jpg)
+![avatar](../images-jp/userGuide/project/projViewLedgerUploadCsvContent-jp.jpg)
+csvファイルのデータが台帳にインポートされます。
+![avatar](../images-jp/userGuide/project/projViewLedgerUploadedCsv-jp.jpg)
 
+####1.4.7.2 台帳データをダウンロードします
+台帳のデータは、ローカルにダウンロードできます。
 
+ダウンロードボタンをクリックします。
+![avatar](../images-jp/userGuide/project/projViewLedgerDownLoadBtn-jp.jpg)
+ダウンロードが完了してから、ファイルダウンロード状態欄でファイルの傍にある矢印をクリックします。
+![avatar](../images-jp/userGuide/project/projViewLedgerDownLoadedCsv-jp.jpg)
+メニューリストが表示され、フォルダを開くをクリックします。
+![avatar](../images-jp/userGuide/project/projViewLedgerShowDownloadFileInFld-jp.jpg)
+ファイルを格納したフォルダが開かれます。
+![avatar](../images-jp/userGuide/project/projViewLedgerDownloadFileInFld-jp.jpg)
+ファイルを開いてから内容を確認します。
+![avatar](../images-jp/userGuide/project/projViewLedgerDownloadFileContent-jp.jpg)
 
-
-
-
-
-
+####1.4.7.3 台帳削除
+台帳を消すには台帳画面の削除ボタンをクリックします。注意するのは台帳削除が、データだけではなく、台帳タグ画面も消されます。
+![avatar](../images-jp/userGuide/project/projViewLedgerDelBtn-jp.jpg)
+台帳削除確認ダイアログボックスが表示され、OKボタンをクリックします(削除を放棄する場合にキャンセルボタンをクリックします)。
+![avatar](../images-jp/userGuide/project/projViewLedgerDelConfirmDlg-jp.jpg)
+台帳が消されます。
+![avatar](../images-jp/userGuide/project/projViewLedgerDeleted-jp.jpg)
 
 
 
