@@ -982,10 +982,9 @@ UndoとRedoは、元に戻すとやり直しです。元に戻すは、編集を
 1.4.3.1のチケット新規を参照となります。
 
 #####1.4.2.7 転送
-転送はあるフロー及びこのフローのチケットをほかのプロジェクトに転送します。
-転送に両種類があり、一つは移動で、もう一つは複製です。
+転送はフローをほかのプロジェクトに転送します。転送に両種類があり、一つは移動で、もう一つは複製です。
 &ensp;移動：フローとフローのチケットをほかのプロジェクトに移します。
-&ensp;複製：フローとフローのチケットコピーしてから、ほかのプロジェクトに複製します。
+&ensp;複製：フローコピーし、ほかのプロジェクトに複製します(チケットは複製しません)。
 
 ######1.4.2.7.1 移動
 フロー総合情報管理画面で、左側の一番下にある転送ボタンをクリックします。
@@ -994,8 +993,8 @@ UndoとRedoは、元に戻すとやり直しです。元に戻すは、編集を
 ![avatar](../images-jp/userGuide/project/projViewFlowTransferDlg-jp.jpg)
 移動ラジオをチェックオンします。
 ![avatar](../images-jp/userGuide/project/projViewFlowTransferDlgMoveChkBox-jp.jpg)
-移動先のプロジェクトを入力します。入力しているうちに入力文字列とプロジェクト番号が部分一致したプロジェクトがリストアップします。
-リストから選択していいです。
+移動先のプロジェクトを入力します。入力しているうちに入力文字列とプロジェクト番号が部分一致したプロジェクトがリストアップし、
+中に選択していいです。
 ![avatar](../images-jp/userGuide/project/projViewFlowTransferDlgMoveDest-jp.jpg)
 OKボタンをクリックします(移動を放棄する場合に、キャンセルボタンをクリックします)。
 ![avatar](../images-jp/userGuide/project/projViewFlowTransferDlgOkBtn-jp.jpg)
@@ -1009,7 +1008,28 @@ OKボタンをクリックします(移動を放棄する場合に、キャン�
 ![avatar](../images-jp/userGuide/project/projViewFlowTransferMovedTicketInDestProj-jp.jpg)
 
 ######1.4.2.7.2 複製
-？？ Error bug24
+複製はフローだけをコピーします。チケットは複製しません。
+
+フロー総合情報管理画面で、左側の一番下にある転送ボタンをクリックします。
+![avatar](../images-jp/userGuide/project/projViewFlowTransferCopyBtn-jp.jpg)
+転送先のプロジェクトダイアログボックスが表示されます。
+![avatar](../images-jp/userGuide/project/projViewFlowTransferCopyDlg-jp.jpg)
+複製ラジオをチェックオンします。
+移動先のプロジェクトを入力します。入力しているうちに入力文字列とプロジェクト番号が部分一致したプロジェクトがリストアップし、
+中に選択していいです。
+![avatar](../images-jp/userGuide/project/projViewFlowTransferDlgCopyDest-jp.jpg)
+OKボタンをクリックします(移動を放棄する場合に、キャンセルボタンをクリックします)。
+![avatar](../images-jp/userGuide/project/projViewFlowTransferCopyDlgOkBtn-jp.jpg)
+複製が終わりです。
+![avatar](../images-jp/userGuide/project/projViewFlowTransferCopyed-jp.jpg)
+移動元のプロジェクトのフロー一覧に複製フローが存在するままです。
+![avatar](../images-jp/userGuide/project/projViewFlowTransferCopyedExistInSrcProj-jp.jpg)
+移動元のプロジェクトのチケット一覧に複製フローのチケットが存在するままです。
+![avatar](../images-jp/userGuide/project/projViewFlowTransferCopyedTicketInSrcProj-jp.jpg)
+遷移先のプロジェクトのフロー一覧に複製フローが表示されます。
+![avatar](../images-jp/userGuide/project/projViewFlowTransferCopyedInDestProj-jp.jpg)
+ただしチケットが複製されません。
+![avatar](../images-jp/userGuide/project/projViewFlowTransferCopyedTicketInDestProj-jp.jpg)
 
 #####1.4.2.8 フロー総合情報管理
 フロー総合情報管理画面は、下記のタグ子画面があります：
@@ -1346,8 +1366,10 @@ OKボタンをクリックします(移動を放棄する場合に、キャン�
 ![avatar](../images-jp/userGuide/project/projViewSetDelProjBtn-jp.jpg)
 削除確認ダイアログボックスが表示され、OKボタンをクリックします(削除を取り消したい場合に取消ボタンをクリックします)。
 ![avatar](../images-jp/userGuide/project/projViewSetDelProjConfirm-jp.jpg)
-？？？？？错误？？？？：项目未被删除
+プロジェクトが削除され、プロジェクト一覧画面が表示されます。
 ![avatar](../images-jp/userGuide/project/projViewSetDeledProj-jp.jpg)
+検索により削除プロジェクトが無くなることを確認できます。
+![avatar](../images-jp/userGuide/project/projViewSetDeledProjNotInPrjList-jp.jpg)
 
 #####1.4.6.2 メンバー
 設定画面の左側の<u>メンバー</u>をクリックします。

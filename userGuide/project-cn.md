@@ -961,10 +961,9 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 参见1.4.3.1 工单新建。
 
 #####1.4.2.7 转让
-转让是将工作流及相应工单转至另外一个项目。
-转让有两种方式，一是移动，而是再生成。
-&ensp;移动：将工作流及其相应工单转移到另一个项目。
-&ensp;再生成：将工作流及其相应工单复制到另一个项目。
+转让是将工作流转至另一项目，有两种方式，一是移动，二是复制。
+&ensp;移动：将工作流及其工单转移到另一个项目。移动后，原项目将不再具有其工作流与其工单。
+&ensp;再生成：将工作流复制到另一个项目，但工作流所属工单不复制。
 
 ######1.4.2.7.1 移动
 在工作流综合管理页面，点击左侧的转让按钮。
@@ -986,8 +985,29 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 工单也一并被转移。
 ![avatar](../images/userGuide/project/projViewFlowTransferMovedTicketInDestProj-cn.jpg)
 
-######1.4.2.7.2 再生成
-？？ Error bug24
+######1.4.2.7.2 复制
+复制，是将工作流复制到另一个项目，但是仅复制工作流，并不复制工单。
+
+在工作流综合信息管理页面，点击左侧的转让按钮。
+![avatar](../images/userGuide/project/projViewFlowTransferCopyBtn-cn.jpg)
+弹出转让目标项目对话框。
+![avatar](../images/userGuide/project/projViewFlowTransferCopyDlg-cn.jpg)
+选择复制单选按钮。并输入转让目标项目，输入时，会自动列出与输入文字部分一致的项目，从中选择即可。
+![avatar](../images/userGuide/project/projViewFlowTransferDlgCopyDest-cn.jpg)
+点击OK按钮即可(如果想放弃转让，则点击取消按钮)。
+![avatar](../images/userGuide/project/projViewFlowTransferCopyDlgOkBtn-cn.jpg)
+转移完成。
+![avatar](../images/userGuide/project/projViewFlowTransferCopyed-cn.jpg)
+在原属项目里，此工作流仍然存在。
+![avatar](../images/userGuide/project/projViewFlowTransferCopyedExistInSrcProj-cn.jpg)
+在原属项目里，此工作流的工单仍然存在。
+![avatar](../images/userGuide/project/projViewFlowTransferCopyedTicketInSrcProj-cn.jpg)
+在转移目标项目里的工作流一览里，出现被复制的工作流。
+![avatar](../images/userGuide/project/projViewFlowTransferCopyedInDestProj-cn.jpg)
+但工单并未被复制。
+![avatar](../images/userGuide/project/projViewFlowTransferCopyedTicketInDestProj-cn.jpg)
+
+
 
 #####1.4.2.8 工作流综合信息管理
 工作流综合管理页面，包括以下功能
@@ -1320,8 +1340,10 @@ Delete是删除。选中某节点图形后，点击Delete即可将其删除。
 ![avatar](../images/userGuide/project/projViewSetDelProjBtn-cn.jpg)
 弹出删除确认对话框，点击OK即可（若不想删除，则点击取消按钮）。
 ![avatar](../images/userGuide/project/projViewSetDelProjConfirm-cn.jpg)
-？？？？？错误？？？？：项目未被删除
+项目被删除，页面跳转至项目一览页面。
 ![avatar](../images/userGuide/project/projViewSetDeledProj-cn.jpg)
+通过检索，确认在项目一览中已无被删项目。
+![avatar](../images/userGuide/project/projViewSetDeledProjNotInPrjList-cn.jpg)
 
 #####1.4.6.2 会员
 在设置画面里，点击左栏的<u>会员</u>，即可打开会员管理。
