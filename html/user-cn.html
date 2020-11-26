@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>user-cn</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<hr>
+<h1 id="-">用户管理</h1>
+<hr>
+<h2 id="1-">1 进入用户管理模块</h2>
+<p>点击页面顶部菜单栏的 <u>用户</u> ，即可进入用户管理模块。<br><img src="../images/userGuide/user/userMenu-cn.jpg" alt="avatar"><br><img src="../images/userGuide/user/userList-cn.jpg" alt="avatar"></p>
+<h2 id="2-">2 用户检索</h2>
+<h3 id="2-1-id-">2.1 检索用户ID中包含输入文字的用户</h3>
+<p>如下图，用户列表上方有检索框，可通过它检索用户。<br>检索的匹配模式是部分包含匹配，即用户ID中包含输入的检索文字的用户会被检索到。且检索文字不区分大小写。<br><img src="../images/userGuide/user/userSelCtrl-cn.jpg" alt="avatar"><br>首先，在检索框中输入检索文字，<br><img src="../images/userGuide/user/inputSelUserWord-cn.jpg" alt="avatar"><br>然后点击检索按钮(即放大镜图标),或者按回车键(Enter键)，<br><img src="../images/userGuide/user/selUserIcon-cn.jpg" alt="avatar"><br>用户ID中包含检索文字的用户被检索出来。<br><img src="../images/userGuide/user/selectedUser-cn.jpg" alt="avatar"></p>
+<h3 id="2-2-">2.2 显示所有用户</h3>
+<p>如果想显示所有用户，则删除检索框中的所有文字，之后点击检索按钮，即可显示所有用户。</p>
+<h2 id="3-">3 下载用户信息一览</h2>
+<p>可以点击下载按钮，将用户信息一览以csv文件格式下载到本地电脑。</p>
+<p>点击下图红框中的下载按钮，<br><img src="../images/userGuide/user/downUserFileIcon-cn.jpg" alt="avatar"><br>下载完成后，浏览器底部显示下载完成的文件，点击文件右边的箭头，<br><img src="../images/userGuide/user/downloadedUser-cn.jpg" alt="avatar"><br>在弹出的菜单中，选择 <u>在文件夹中显示</u> ,<br><img src="../images/userGuide/user/showDownFileInFld-cn.jpg" alt="avatar"><br>下载文件的所在文件夹被打开，可以看到下载文件，<br><img src="../images/userGuide/user/openDownFileFld-cn.jpg" alt="avatar"><br>打开文件，确认文件里的用户信息。<br><img src="../images/userGuide/user/openDownUserFile-cn.jpg" alt="avatar"></p>
+<h2 id="4-">4 新建用户</h2>
+<p>新建用户有两种方式。<br>&emsp;第一种是点击用户列表左上方的的 <u>+新建</u> 按钮(参见下图的第一个红框)。<br>&emsp;第二种是点击上传按钮，通过上传的csv文件批量新建用户(参见下图的第二个红框)。<br><img src="../images/userGuide/user/newUserTwoBtn-cn.jpg" alt="avatar"></p>
+<p>以下分别说明两种新建用户的方法。</p>
+<h3 id="4-1-u-u-">4.1 点击用户列表左上方的 <u>+新建</u> 按钮来新建用户</h3>
+<p>点击用户列表左上方的 <u>+新建</u> 按钮,<br><img src="../images/userGuide/user/addUserBtn-cn.jpg" alt="avatar"><br>进入新建用户页面,<br><img src="../images/userGuide/user/newUserInit-cn.jpg" alt="avatar"><br>输入要新建的用户信息后，点击<u>保存</u>按钮,<br><img src="../images/userGuide/user/newUser-cn.jpg" alt="avatar"><br>页面跳转到用户信息详情页面。可继续进行用户其它信息的设定。<br><img src="../images/userGuide/user/userCreated-cn.jpg" alt="avatar"></p>
+<p><u><strong>用户图片设定的说明：</strong></u><br>如下图，点击上载，<br><img src="../images/userGuide/user/userPicBtn-cn.jpg" alt="avatar"><br>弹出文件选择框，<br><img src="../images/userGuide/user/selFileDlg-cn.jpg" alt="avatar"><br>选择一个图片文件，之后点击<u>打开(O)</u>按钮，<br><img src="../images/userGuide/user/selFileDlgOpen-cn.jpg" alt="avatar"><br>图片上载并显示。<br><img src="../images/userGuide/user/userPicSeled-cn.jpg" alt="avatar"></p>
+<p>当要改变用户图片时，则将鼠标移动到图片上，则会出现下图中的眼睛图标和垃圾箱图标。<br><img src="../images/userGuide/user/userPicMouseUp-cn.jpg" alt="avatar"><br>点击眼睛图标，可以放大图片<br><img src="../images/userGuide/user/userPicZoomInIcon-cn.jpg" alt="avatar"><br><img src="../images/userGuide/user/userPicZoomIn-cn.jpg" alt="avatar"><br>若要关闭放大，则点击放大框的右上角的 <u>X</u> 即可。<br><img src="../images/userGuide/user/userPicZoomInCloseIcon-cn.jpg" alt="avatar"></p>
+<p>更改用户图片时，则点击垃圾箱图标<br><img src="../images/userGuide/user/userPicBinIcon-cn.jpg" alt="avatar"><br>则设定的图片被删除。删除后，若想重新设定，则可点击<u>上载</u>重新选择图片。<br><img src="../images/userGuide/user/userPicDeled-cn.jpg" alt="avatar"></p>
+<h3 id="4-2-csv-">4.2 通过上传的csv文件批量新建用户</h3>
+<p>首先准备好用户csv文件,csv文件的内容和格式参见下图中的newUserList.csv，<br><img src="../images/userGuide/user/userCsvFile-cn.jpg" alt="avatar"><br>点击用户列表右上方的上载按钮，<br><img src="../images/userGuide/user/uploadUserCsvIcon-cn.jpg" alt="avatar"><br>弹出文件选择框，<br><img src="../images/userGuide/user/selFileDlgUserCsv-cn.jpg" alt="avatar"><br>选择准备的用户csv文件，之后点击<u>打开(O)</u>按钮，<br><img src="../images/userGuide/user/selectedUserCsv_cn.jpg" alt="avatar"><br>画面回到用户一览页面，可以看到用户csv文件中的用户已显示在用户一览中。<br><img src="../images/userGuide/user/addedUserByCsv-cn.jpg" alt="avatar"></p>
+<h2 id="5-">5.用户综合信息管理</h2>
+<p>点击要修改的用户的用户ID(当用户较多时，可通过检索缩小一览里的用户条数)，<br><img src="../images/userGuide/user/clickOneUserInList-cn.jpg" alt="avatar"><br>进入用户综合信息管理画面,此页面提供以下功能：</p>
+<ul>
+<li>编辑：用户基本信息修改</li><li>总览：用户工单完成情况一览</li><li>群组会员：用户所属群组一览、删除群组</li><li>项目：用户项目一览、新建项目和删除项目</li><li>工作流：用户工作流一览和删除</li><li>工单：用户工单一览、删除工单</li><li>活动：用户操作记录一览</li><li>备注：用户项目备注一览</li></ul>
+<p><img src="../images/userGuide/user/userViewInit-cn.jpg" alt="avatar"></p>
+<h3 id="5-1-">5.1 修改用户基本信息</h3>
+<p>若要修改用户基本信息，则点击用户综合信息管理页面左上方的 <u>编辑</u> 按钮,<br><img src="../images/userGuide/user/editUserBtn-cn.jpg" alt="avatar"><br>进入用户基本信息修改页面，<br><img src="../images/userGuide/user/editUserInit-cn.jpg" alt="avatar"><br>修改用户信息，之后点击 <u>保存</u> 按钮,<br><img src="../images/userGuide/user/editUser-cn.jpg" alt="avatar"><br>返回用户综合信息管理页面，可以看到用户信息已被修改。<br><img src="../images/userGuide/user/editedUser-cn.jpg" alt="avatar"></p>
+<h3 id="5-2-">5.2 用户总览标签页</h3>
+<p>进入用户综合信息管理页面后，页面右栏的第一个就是用户总览标签页。<br>如果在其它标签页，点击<u>用户总览</u>标签，切换到用户总览标签页。<br>图中的方格是日期方格，绿色方格表示有工作，灰色方格表示空闲。<br><img src="../images/userGuide/user/userViewOverall-cn.jpg" alt="avatar"></p>
+<p>将鼠标移至要查看的日期方格上，会显示此格的日期以及工单件数。<br><img src="../images/userGuide/user/userOverallMouseUp-cn.jpg" alt="avatar"><br>鼠标单击要查看的日期方格，则会总览标签页下部显示工单详情列表。<br><img src="../images/userGuide/user/userOverallClicked-cn.jpg" alt="avatar"></p>
+<h3 id="5-3-">5.3 群组会员标签页</h3>
+<p>点击群组会员标签，<br><img src="../images/userGuide/user/userViewGropTag-cn.jpg" alt="avatar"><br>进入此用户的所属群组会员一览页面。<br><img src="../images/userGuide/user/userViewGropList-cn.jpg" alt="avatar"></p>
+<h4 id="5-3-1-">5.3.1 用户所属群组的检索</h4>
+<p>当群组较多时，可通过群组一览左上方的检索框，缩小一览中的群组表示条数。<br>检索匹配模式为包含模式。即群组编号中包含所输入的检索文字的群组被检索出来。且检索文字不区分大小写。</p>
+<p>例如下图,检索框中输入检索文字,<br><img src="../images/userGuide/user/userViewGropSelWord-cn.jpg" alt="avatar"><br>然后点击检索按钮(即放大镜图标),或者按回车键(Enter键)，<br><img src="../images/userGuide/user/userViewGropSelIcon-cn.jpg" alt="avatar"><br>群组编号中包含检索文字的群组被检索出来。<br><img src="../images/userGuide/user/userViewGropSelected-cn.jpg" alt="avatar"></p>
+<p><strong>[备注]</strong>当想要显示所有群组时，则删除检索框中的所有文字，然后点击检索按钮(即放大镜图标),或者按回车键(Enter键)即可。</p>
+<h4 id="5-3-2-">5.3.2 用户所属群组的删除</h4>
+<p>从群组一览中，点击要删除群组的前面的复选框，<br><img src="../images/userGuide/user/userViewGropChkbox-cn.jpg" alt="avatar"><br>选中后，群组一览上方显示选中的条数以及<u>删除</u>按钮，<br><img src="../images/userGuide/user/userViewGropChkOn-cn.jpg" alt="avatar"><br>点击删除按钮，<br><img src="../images/userGuide/user/userViewGropDelBtn-cn.jpg" alt="avatar"><br>弹出删除确认对话框，点击OK按钮，(若想放弃删除，则点击取消即可)，<br><img src="../images/userGuide/user/userViewDelGrpConfirm-cn.jpg" alt="avatar"><br>群组一览刷新，可以看到删除的群组已从一览中消失。<br><img src="../images/userGuide/user/userViewDeledGrp-cn.jpg" alt="avatar"></p>
+<h3 id="5-4-">5.4 项目标签页</h3>
+<p>点击项目标签，<br><img src="../images/userGuide/user/userViewProjTag-cn.jpg" alt="avatar"><br>进入此用户的项目一览页面。注意一览的第一列(即项目一列)为<u>项目所有人</u>和<u>项目编号</u>用&quot;/&quot;拼接在一起的文字内容。<br><img src="../images/userGuide/user/userViewProjList-cn.jpg" alt="avatar"></p>
+<h4 id="5-4-1-">5.4.1 用户项目的检索</h4>
+<p>当项目较多时，可通过项目一览左上方的检索框，缩小一览中的项目表示条数。<br>检索匹配模式为包含模式。即项目编号中包含所输入的检索文字的项目被检索出来。且检索文字不区分大小写。</p>
+<p>例如下图,检索框中输入检索文字,<br><img src="../images/userGuide/user/userViewProjSelWord-cn.jpg" alt="avatar"><br>然后点击检索按钮(即放大镜图标),或者按回车键(Enter键)，<br><img src="../images/userGuide/user/userViewProjSelIcon-cn.jpg" alt="avatar"><br>项目编号中包含检索文字的项目被检索出来。<br><img src="../images/userGuide/user/userViewProjSelected-cn.jpg" alt="avatar"></p>
+<p><strong>[备注]</strong>当想要显示所有项目时，则删除检索框中的所有文字，然后点击检索按钮(即放大镜图标),或者按回车键(Enter键)即可。</p>
+<h4 id="5-4-2-">5.4.2 新建用户项目</h4>
+<p>当想要新建一个此用户的项目时，则点击项目一览右上方的<u>+新建</u>按钮，<br><img src="../images/userGuide/user/userViewProjNewBtn-cn.jpg" alt="avatar"><br>页面跳转到新建项目页面，<br><img src="../images/userGuide/user/userViewProjNewInit-cn.jpg" alt="avatar"><br>输入项目信息后，点击<u>保存</u>按钮，<br><img src="../images/userGuide/user/userViewProjNew-cn.jpg" alt="avatar"><br>页面跳转到项目总览页面，<br><img src="../images/userGuide/user/userViewProjCreated-cn.jpg" alt="avatar"><br>重新回到用户综合信息管理页面的项目标签页(打开此页面的方法请参见 ##1 进入用户管理模块-&gt;##5.用户综合信息管理-&gt;###5.4 项目标签页 ),<br>可以看到新建的项目已显示在项目一览中。<br><img src="../images/userGuide/user/userViewProjCreatedReList-cn.jpg" alt="avatar"></p>
+<h4 id="5-4-3-">5.4.3 用户项目的删除</h4>
+<p>从项目一览中，点击要删除项目的前面的复选框，<br><img src="../images/userGuide/user/userViewProjChkbox-cn.jpg" alt="avatar"><br>选中后，项目一览上方显示选中的条数以及<u>删除</u>按钮，<br><img src="../images/userGuide/user/userViewProjChkOn-cn.jpg" alt="avatar"><br>点击删除按钮，<br><img src="../images/userGuide/user/userViewProjDelBtn-cn.jpg" alt="avatar"><br>弹出删除确认对话框，点击OK按钮，(若想放弃删除，则点击取消即可)，<br><img src="../images/userGuide/user/userViewDelProjConfirm-cn.jpg" alt="avatar"><br>项目一览刷新，可以看到删除的项目已从一览中消失。<br><img src="../images/userGuide/user/userViewDeledProj-cn.jpg" alt="avatar"></p>
+<h3 id="5-5-">5.5 工作流标签页</h3>
+<p>点击工作流标签，<br><img src="../images/userGuide/user/userViewWorkflowTag-cn.jpg" alt="avatar"><br>进入此用户的工作流一览页面。<br><img src="../images/userGuide/user/userViewWorkflowList-cn.jpg" alt="avatar"></p>
+<h4 id="5-5-1-">5.5.1 用户工作流的检索</h4>
+<p>当工作流较多时，可通过工作流一览左上方的检索框，缩小一览中的工作流的表示条数。<br>检索匹配模式为包含模式。即工作流名称中包含所输入的检索文字的工作流被检索出来。且检索文字不区分大小写。</p>
+<p>例如下图,检索框中输入检索文字,<br><img src="../images/userGuide/user/userViewWorkflowSelWord-cn.jpg" alt="avatar"><br>然后点击检索按钮(即放大镜图标),或者按回车键(Enter键)，<br><img src="../images/userGuide/user/userViewWorkflowSelIcon-cn.jpg" alt="avatar"><br>工作流名称中包含检索文字的工作流被检索出来。<br><img src="../images/userGuide/user/userViewWorkflowSelected-cn.jpg" alt="avatar"></p>
+<p><strong>[备注]</strong>当想要显示所有工作流时，则删除检索框中的所有文字，然后点击检索按钮(即放大镜图标),或者按回车键(Enter键)即可。</p>
+<h4 id="5-5-2-">5.5.2 工作流的删除</h4>
+<p>从工作流一览中，点击要删除的工作流的前面的复选框，<br><img src="../images/userGuide/user/userViewWorkflowChkbox-cn.jpg" alt="avatar"><br>选中后，工作流一览上方显示选中的条数以及<u>删除</u>按钮，<br><img src="../images/userGuide/user/userViewWorkflowChkOn-cn.jpg" alt="avatar"><br>点击删除按钮，<br><img src="../images/userGuide/user/userViewWorkflowDelBtn-cn.jpg" alt="avatar"><br>弹出删除确认对话框，点击OK按钮，(若想放弃删除，则点击取消即可)，<br><img src="../images/userGuide/user/userViewDelWorkflowConfirm-cn.jpg" alt="avatar"><br>工作流一览刷新，可以看到删除的工作流已从一览中消失。<br><img src="../images/userGuide/user/userViewDeledWorkflow-cn.jpg" alt="avatar"></p>
+<h3 id="5-6-">5.6 工单标签页</h3>
+<p>点击工单标签，<br><img src="../images/userGuide/user/userViewWorkorderTag-cn.jpg" alt="avatar"><br>进入此用户的工单一览页面。<br><img src="../images/userGuide/user/userViewWorkorderList-cn.jpg" alt="avatar"></p>
+<h4 id="5-6-1-">5.6.1 工单一览说明</h4>
+<p>(1) 工作流<br>将鼠标移至某工作流的工作流一列上时，将显示此工作流的概要信息。<br><img src="../images/userGuide/user/userViewWrkOrdNameMouseup-cn.jpg" alt="avatar"><br><img src="../images/userGuide/user/userViewWrkOrdTip-cn.jpg" alt="avatar"><br>(2) 目标/经过时间<br>工单一览中的目标/经过时间一列，是以柱状图表示的。将鼠标移至某一工单的柱状图上时，<br>将会显示此工单的历经时间。<br><img src="../images/userGuide/user/userViewWrkOrdTakeupTime-cn.jpg" alt="avatar"></p>
+<h4 id="5-6-2-">5.6.2 工单的删除</h4>
+<p>从工单一览中，点击要删除的工单的前面的复选框，<br><img src="../images/userGuide/user/userViewWorkorderChkbox-cn.jpg" alt="avatar"><br>选中后，工单一览上方显示选中的条数以及<u>删除</u>按钮，<br><img src="../images/userGuide/user/userViewWorkorderChkOn-cn.jpg" alt="avatar"><br>点击删除按钮，<br><img src="../images/userGuide/user/userViewWorkorderDelBtn-cn.jpg" alt="avatar"><br>弹出删除确认对话框，点击OK按钮，(若想放弃删除，则点击取消即可)，<br><img src="../images/userGuide/user/userViewDelWorkorderConfirm-cn.jpg" alt="avatar"><br>工单一览刷新，可以看到删除的工单已从一览中消失。<br><img src="../images/userGuide/user/userViewDeledWorkorder-cn.jpg" alt="avatar"></p>
+<h4 id="5-7-">5.7 活动标签页</h4>
+<p>点击活动标签<br><img src="../images/userGuide/user/userViewOperationTag-cn.jpg" alt="avatar"><br>进入此用户的工单一览页面。此页面可以查看用户的操作历史。<br><img src="../images/userGuide/user/userViewOperationList-cn.jpg" alt="avatar"></p>
+<h4 id="5-8-">5.8 备注标签页</h4>
+<p>点击备注标签,<br><img src="../images/userGuide/user/userViewProjMemoTag-cn.jpg" alt="avatar"><br>进入此用户的项目备注一览页面。<br><img src="../images/userGuide/user/userViewProjMemoList-cn.jpg" alt="avatar"></p>
+<h5 id="5-8-1-">5.8.1 备注详情</h5>
+<p>点击一览的标题，<br><img src="../images/userGuide/user/userViewProjMemoTitleLink-cn.jpg" alt="avatar"><br>进入备注详情页面。<br><img src="../images/userGuide/user/userViewProjMemoDtl-cn.jpg" alt="avatar"><br>如果想修改备注信息，可以点击<u>编辑...</u>按钮，<br><img src="../images/userGuide/user/userViewProjMemoDtlEditBtn-cn.jpg" alt="avatar"><br>进入备注修改页面，<br><img src="../images/userGuide/user/userViewProjMemoEditInit-cn.jpg" alt="avatar"><br>修改备注信息，之后点击<u>保存</u>按钮，<br><img src="../images/userGuide/user/userViewProjMemoEdit-cn.jpg" alt="avatar"><br>保存修改后，页面会转回备注详情页面。可以看到备注已被修改。<br><img src="../images/userGuide/user/userViewProjMemoEdited-cn.jpg" alt="avatar"></p>
+<h5 id="5-8-1-">5.8.1 备注的删除</h5>
+<p>从备注一览中，点击要删除的备注的前面的复选框，<br><img src="../images/userGuide/user/userViewProjMemoChkbox-cn.jpg" alt="avatar"><br>选中后，备注一览上方显示选中的条数以及<u>删除</u>按钮，<br><img src="../images/userGuide/user/userViewProjMemoChkOn-cn.jpg" alt="avatar"><br>点击删除按钮，<br><img src="../images/userGuide/user/userViewProjMemoDelBtn-cn.jpg" alt="avatar"><br>弹出删除确认对话框，点击OK按钮，(若想放弃删除，则点击取消即可)，<br><img src="../images/userGuide/user/userViewDelProjMemoConfirm-cn.jpg" alt="avatar"><br>备注一览刷新，可以看到删除的备注已从一览中消失。<br><img src="../images/userGuide/user/userViewDeledProjMemo-cn.jpg" alt="avatar"></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

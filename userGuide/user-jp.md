@@ -315,7 +315,19 @@
 スニペット一覧が再表示され、消されたスニペットが一覧に無くなりました。
 ![avatar](../images-jp/userGuide/user/userViewDeledProjMemo-jp.jpg)
 
-
+##6.ユーザー削除
+ユーザー一覧から消すユーザーを選びます。一覧に表示するユーザー数が多すぎ時に、検索で表示数を縮まられます。
+![avatar](../images-jp/userGuide/user/selectUserInUserList-jp.jpg)
+消すユーザーを選択したら、一覧の直上に選択件数と削除ボタンが表示されます。
+![avatar](../images-jp/userGuide/user/selectedUserInUserList-jp.jpg)
+削除ボタンをクリックします。
+![avatar](../images-jp/userGuide/user/userListDeleteBtn-jp.jpg)
+削除確認ダイアログボックスが表示されます。
+![avatar](../images-jp/userGuide/user/deleteUserFromListConfirm-jp.jpg)
+確認ダイアログボックスでOKボタンをクリックします(削除を放棄する場合にキャンセルボタンをクリックします)。
+![avatar](../images-jp/userGuide/user/deleteUserFromListConfirmOkBtn-jp.jpg)
+ユーザー削除が終わりです。
+![avatar](../images-jp/userGuide/user/deletedUserFromList-jp.jpg)
 
 
 

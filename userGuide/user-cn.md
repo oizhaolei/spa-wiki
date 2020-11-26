@@ -300,9 +300,19 @@
 备注一览刷新，可以看到删除的备注已从一览中消失。
 ![avatar](../images/userGuide/user/userViewDeledProjMemo-cn.jpg)
 
-
-
-
+##6.删除用户
+要删除用户，首先在用户一览里选中要删除的用户。当一览中用户数过多时，可利用检索缩减列表中用户数。
+![avatar](../images/userGuide/user/selectUserInUserList-cn.jpg)
+选中后，一览的上方出现选中件数信息和删除按钮。
+![avatar](../images/userGuide/user/selectedUserInUserList-cn.jpg)
+点击删除按钮。
+![avatar](../images/userGuide/user/userListDeleteBtn-cn.jpg)
+弹出删除确认对话框。
+![avatar](../images/userGuide/user/deleteUserFromListConfirm-cn.jpg)
+点击对话框上的OK按钮即可(若想放弃删除，则点击取消按钮)。
+![avatar](../images/userGuide/user/deleteUserFromListConfirmOkBtn-cn.jpg)
+用户被删除，从一览中消失。
+![avatar](../images/userGuide/user/deletedUserFromList-cn.jpg)
 
 
 

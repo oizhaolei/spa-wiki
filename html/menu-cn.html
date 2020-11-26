@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+ul{
+	list-style: none;
+}
+
+li{ 
+  width:500px; 
+  height:28px; 
+  text-align:left; 
+  padding-left: 0px; 
+  line-height:28px; 
+  border-bottom:dashed 1px #CCC;
+  cursor:pointer;
+} 
+
+</style>
+
+<script>
+
+var preCatalog = "catalogStart";
+
+window.onload=function(){
+	document.getElementById("content").innerHTML='<object type="text/html" data="./getting-started-cn.html" width="100%" height="100%"></object>';
+	document.getElementById(preCatalog).style.color="blue";
+}
+
+function menuClk(item)
+{	
+	document.getElementById(preCatalog).style.color="black";
+	document.getElementById(item).style.color="blue";
+	preCatalog = item;
+	var manualKbn="";
+	switch(item) {
+		case "catalogStart":
+			manualKbn="getting-started-cn";			
+			break;
+		case "catalogAnalysis":
+	        manualKbn="analysis-cn";
+	        break;
+		case "catalogProject":
+	        manualKbn="project-cn";
+	        break;
+		case "catalogOrganization":
+	        manualKbn="organization-cn";
+	        break;
+		case "catalogUser":
+	        manualKbn="user-cn";
+	        break;
+		case "catalogGroup":
+	        manualKbn="group-cn";
+	        break;
+		default:
+	        manualKbn="catalogStart";
+	        break;
+	}
+	
+	var manualUrl = '<object type="text/html" data="./{manualKbn}.html" width="100%" height="100%"></object>';
+	document.getElementById("content").innerHTML=manualUrl.replace(/{manualKbn}/,manualKbn);
+}
+</script>
+
+<meta charset="utf-8"> 
+<title>SPA-FLOW(runoob.com)</title> 
+</head>
+<body style="height:100%;width:100%">
+
+<div id="container" style="width:100%">
+	<!-- Header -->
+	<div id="header" style="height:50px;">
+	<h2 style="margin-bottom:0;text-align:center;">SPA-FLOW 用户手册</h2>
+	</div>
+	<!-- Menu -->
+	<div id="menu" style="border:1px #F5F5F5 solid;height:800px;width:12%;float:left;">
+		<ul>
+			<li id="catalogStart"        onclick="menuClk(this.id)">开始</li><br>
+			<li id="catalogAnalysis"     onclick="menuClk(this.id)">分析</li><br>
+			<li id="catalogProject"      onclick="menuClk(this.id)">项目</li><br>
+			<li id="catalogOrganization" onclick="menuClk(this.id)">组织</li><br>
+			<li id="catalogUser"         onclick="menuClk(this.id)">用户</li><br>
+			<li id="catalogGroup"        onclick="menuClk(this.id)">群组</li><br>
+		</ul>
+	</div>
+	<!-- Content -->
+	<div id="content" style="border:1px #F5F5F5 solid;height:800px;width:86%;float:left;">
+	main content : here is spa-flow manual.</div>
+	<!-- footer -->
+	<div id="footer" style="height:20px;clear:both;text-align:center;">
+	<h5 style="margin-bottom:0;text-align:center;">AS-CUBE技术有限公司<br>Copyright  2020 as-cube.com All RIGHTS RESERVED.</h5>
+	
+	</div>
+
+</div>
+ 
+</body>
+</html>

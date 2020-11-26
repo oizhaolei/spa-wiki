@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>group-cn</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+<style type="text/css">
+.highlight  { background: #ffffff; }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { font-weight: bold } /* Keyword */
+.highlight .o { font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .gd .x { color: #000000; background-color: #ffaaaa } /* Generic.Deleted.Specific */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .gi .x { color: #000000; background-color: #aaffaa } /* Generic.Inserted.Specific */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { font-weight: bold } /* Keyword.Constant */
+.highlight .kd { font-weight: bold } /* Keyword.Declaration */
+.highlight .kp { font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d14 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d14 } /* Literal.String.Backtick */
+.highlight .sc { color: #d14 } /* Literal.String.Char */
+.highlight .sd { color: #d14 } /* Literal.String.Doc */
+.highlight .s2 { color: #d14 } /* Literal.String.Double */
+.highlight .se { color: #d14 } /* Literal.String.Escape */
+.highlight .sh { color: #d14 } /* Literal.String.Heredoc */
+.highlight .si { color: #d14 } /* Literal.String.Interpol */
+.highlight .sx { color: #d14 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d14 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+.pl-c {
+    color: #969896;
+}
+
+.pl-c1,.pl-mdh,.pl-mm,.pl-mp,.pl-mr,.pl-s1 .pl-v,.pl-s3,.pl-sc,.pl-sv {
+    color: #0086b3;
+}
+
+.pl-e,.pl-en {
+    color: #795da3;
+}
+
+.pl-s1 .pl-s2,.pl-smi,.pl-smp,.pl-stj,.pl-vo,.pl-vpf {
+    color: #333;
+}
+
+.pl-ent {
+    color: #63a35c;
+}
+
+.pl-k,.pl-s,.pl-st {
+    color: #a71d5d;
+}
+
+.pl-pds,.pl-s1,.pl-s1 .pl-pse .pl-s2,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre,.pl-src,.pl-v {
+    color: #df5000;
+}
+
+.pl-id {
+    color: #b52a1d;
+}
+
+.pl-ii {
+    background-color: #b52a1d;
+    color: #f8f8f8;
+}
+
+.pl-sr .pl-cce {
+    color: #63a35c;
+    font-weight: bold;
+}
+
+.pl-ml {
+    color: #693a17;
+}
+
+.pl-mh,.pl-mh .pl-en,.pl-ms {
+    color: #1d3e81;
+    font-weight: bold;
+}
+
+.pl-mq {
+    color: #008080;
+}
+
+.pl-mi {
+    color: #333;
+    font-style: italic;
+}
+
+.pl-mb {
+    color: #333;
+    font-weight: bold;
+}
+
+.pl-md,.pl-mdhf {
+    background-color: #ffecec;
+    color: #bd2c00;
+}
+
+.pl-mdht,.pl-mi1 {
+    background-color: #eaffea;
+    color: #55a532;
+}
+
+.pl-mdr {
+    color: #795da3;
+    font-weight: bold;
+}
+
+.pl-mo {
+    color: #1d3e81;
+}
+.task-list {
+padding-left:10px;
+margin-bottom:0;
+}
+
+.task-list li {
+    margin-left: 20px;
+}
+
+.task-list-item {
+list-style-type:none;
+padding-left:10px;
+}
+
+.task-list-item label {
+font-weight:400;
+}
+
+.task-list-item.enabled label {
+cursor:pointer;
+}
+
+.task-list-item+.task-list-item {
+margin-top:3px;
+}
+
+.task-list-item-checkbox {
+display:inline-block;
+margin-left:-20px;
+margin-right:3px;
+vertical-align:1px;
+}
+</style>
+</head>
+<body>
+<hr>
+<h1 id="-">群组管理</h1>
+<hr>
+<h2 id="1-">1 进入群组管理模块</h2>
+<p>点击页面顶部菜单栏的 <u>群组</u> ，即可进入群组管理模块。<br><img src="../images/userGuide/group/groupMenu-cn.jpg" alt="avatar"><br><img src="../images/userGuide/group/groupList-cn.jpg" alt="avatar"></p>
+<h2 id="2-">2 新建群组</h2>
+<p>新建群组有两种方式。<br>&emsp;第一种是点击页面左栏群组列表下面的 <u>新建...</u> 按钮。<br>&emsp;第二种是点击页面右栏的概要标签的下面的 <u>新建...</u> 按钮。<br>二者的不同之处是：<br>&emsp;第一种：新建群组页面里的上级群组一项的默认值为空。<br>&emsp;第二种：新建群组页面里的上级群组一项的默认值为当前选择的群组。</p>
+<p>以下分别说明两种新建群组的方法。</p>
+<h2 id="2-1-u-u-">2.1 点击页面左栏群组列表下面的 <u>新建...</u> 按钮来新建群组</h2>
+<p>点击页面左栏群组列表下面的 <u>新建...</u> 按钮<br><img src="../images/userGuide/group/addGroupBtnLeft-cn.jpg" alt="avatar"><br>进入新建群组页面。注意上级群组一项为空，没有默认值。<br><img src="../images/userGuide/group/newGroupInitNoSup-cn.jpg" alt="avatar"><br>输入要新建的群组信息后，点击<u>保存</u>按钮。<br>[注意]&emsp;上级群组若不输入，则建立的群组为顶级群组。<br><img src="../images/userGuide/group/newGroup-cn.jpg" alt="avatar"><br>保存后，页面跳转到一览页面，在一览中，可以看到刚才新建的群组。<br><img src="../images/userGuide/group/newGroupSaved-cn.jpg" alt="avatar"></p>
+<h2 id="2-2-u-u-">2.2 点击页面右栏的概要标签的下面的 <u>新建...</u> 按钮来新建群组</h2>
+<p>选择一个群组，点击其概要标签页下面的<u>新建...</u> 按钮<br><img src="../images/userGuide/group/addGroupBtnRight-cn.jpg" alt="avatar"><br>进入新建群组页面。注意上级群组一项具有默认值，其默认值为当前选中的群组。<br><img src="../images/userGuide/group/newGroupInitHaveSup-cn.jpg" alt="avatar"><br>输入要新建的群组信息后，点击<u>保存</u>按钮。<br><img src="../images/userGuide/group/newGroupHaveSup-cn.jpg" alt="avatar"><br>保存后，页面跳转到一览页面，在一览中，可以看到刚才新建的群组。<br><img src="../images/userGuide/group/newGroupSavedHaveSup-cn.jpg" alt="avatar"></p>
+<h2 id="3-">3.编辑群组</h2>
+<p>从页面左栏的群组树中，点击选择要修改的群组。页面右栏则显示被选择的群组信息。<br>群组信息分为<u>概要</u>、<u>群组成员</u>、<u>下级群组</u>、<u>关联项目</u> 四部分。<br><img src="../images/userGuide/group/selectGroup-cn.jpg" alt="avatar"></p>
+<h3 id="3-1-">3.1群组概要信息的编辑</h3>
+<p>点击概要下面的<u>编辑...</u>按钮，即可进入群组修改页面。<br><img src="../images/userGuide/group/editGroupBtn-cn.jpg" alt="avatar"><br>进入群组编辑页面。<br><img src="../images/userGuide/group/editGroupInit-cn.jpg" alt="avatar"><br>修改群组信息后，点击<u>保存</u>按钮。<br><img src="../images/userGuide/group/editGroup-cn.jpg" alt="avatar"><br>保存后，页面跳转至群组一览页面，可以看到刚才修改的群组的信息。<br><img src="../images/userGuide/group/editGroupSaved-cn.jpg" alt="avatar"></p>
+<h3 id="3-2-">3.2群组成员的管理</h3>
+<p>点击群组成员标签，进入群组成员一览页面。在此页面，可添加和移除群组成员。<br><img src="../images/userGuide/group/userList-cn.jpg" alt="avatar"></p>
+<h4 id="3-2-1-">3.2.1添加群组成员</h4>
+<p>点击<u>添加</u>按钮，<br><img src="../images/userGuide/group/userListAddBtn-cn.jpg" alt="avatar"><br>弹出添加用户的页面。<br><img src="../images/userGuide/group/addUserDlg-cn.jpg" alt="avatar"><br>在输入框中输入要添加的用户名。输入时，与输入文字部分匹配的用户将自动列出，可从列表中点击选择。<br><img src="../images/userGuide/group/addUserDlgSel-cn.jpg" alt="avatar"><br>选择好要添加的用户后，点击OK按钮即可。若要放弃本次操作，则点击取消按钮即可。<br><img src="../images/userGuide/group/addUserDlgSelected-cn.jpg" alt="avatar"><br>点击OK按钮后，页面跳转到用户一览画面，可以看到刚才添加的用户出现在列表中。<br><img src="../images/userGuide/group/addUserSaved-cn.jpg" alt="avatar"></p>
+<h4 id="3-2-2-">3.2.2移除群组成员</h4>
+<p>选中要移除的用户前面的复选框，<br><img src="../images/userGuide/group/delUserChk-cn.jpg" alt="avatar"><br>之后用户列表上方出现已选中条数的信息和<u>移除</u>按钮,<br><img src="../images/userGuide/group/delUserChkOn-cn.jpg" alt="avatar"><br>选中要移除的用户后，点击<u>移除</u>按钮,<br><img src="../images/userGuide/group/delUserBtn-cn.jpg" alt="avatar"><br>用户一览刷新，可以看到被移除的用户已经从一览中消失。<br><img src="../images/userGuide/group/deledUser-cn.jpg" alt="avatar"></p>
+<h3 id="3-3-">3.3下级群组的管理</h3>
+<p>点击下级群组，进入下级群组一览页面，在此页面，可删除下级群组和查看下级群组的详细信息。<br><img src="../images/userGuide/group/childGroupList-cn.jpg" alt="avatar"></p>
+<h4 id="3-3-1-">3.3.1删除下级群组</h4>
+<p>通过点选最前面的复选框选中要删除的下级群组，之后下级群组列表上方出现已选中条数的信息和<u>删除</u>按钮。<br><img src="../images/userGuide/group/delGroupChk-cn.jpg" alt="avatar"><br><img src="../images/userGuide/group/delGroupChked-cn.jpg" alt="avatar"><br>选中要删除的下级群组后，点击<u>删除</u>按钮。出现删除确认的对话框。<br>点击<u>OK</u>按钮，即可进行删除。点击<u>取消</u>按钮，则放弃本次删除操作。<br><img src="../images/userGuide/group/delGroupConfirm-cn.jpg" alt="avatar"><br>之后，下级群组一览刷新。可以看到刚才删除的下级群组已经从一览中消失。<br><img src="../images/userGuide/group/deledGroup-cn.jpg" alt="avatar"></p>
+<h4 id="3-3-2-">3.3.2查看下级群组详细信息</h4>
+<p>点击要查看的群组的群组编号，进入下级群组详细信息页面，可查看其详细信息。<br><img src="../images/userGuide/group/childGroupLink-cn.jpg" alt="avatar"><br><img src="../images/userGuide/group/childGroupDetail-cn.jpg" alt="avatar"><br>进入下级群组详细信息页面后，在页面左栏有<u>编辑...</u>、<u>新建...</u>按钮。<br>页面右栏则有群组成员、下级群组、关联项目3个标签页面。下面分别说明其操作功能。<br>&emsp;编辑按钮：点击进入群组编辑页面，操作请参见<u>###3.1群组概要信息的编辑</u>。<br>&emsp;新建按钮：点击进入群组新建页面，操作请参见<u>##2.2 点击页面右栏的概要标签的下面的 <u>新建...</u> 按钮来新建群组</u>。<br>&emsp;群组成员标签页：参见<u>###3.2群组成员的管理</u>。<br>&emsp;下级群组标签页：参见<u>###3.3下级群组的管理</u>。<br>&emsp;关联项目标签页：参见<u>###3.4关联项目的管理</u>。</p>
+<h3 id="3-4-">3.4关联项目的管理</h3>
+<p>点击关联项目，进入关联项目一览页面。<br><img src="../images/userGuide/group/relatedPrj-cn.jpg" alt="avatar"></p>
+<h3 id="3-4-1-">3.4.1查看项目具体信息</h3>
+<p>点击要查看的项目，<br><img src="../images/userGuide/group/relatedPrjLink-cn.jpg" alt="avatar"><br>进入项目详细页面。<br><img src="../images/userGuide/group/relatedPrjDetail-cn.jpg" alt="avatar"></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
