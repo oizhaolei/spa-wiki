@@ -42,7 +42,7 @@
 新建群组有两种方式。
 一种是点击<u>+新建</u>按钮，进入创建群组页面来新建群组。
 另一种是通过点击上传按钮，通过上传csv文件来批量建立群组。
-
+![avatar](../images/userGuide/group/newGroupTwoBtn-cn.jpg)
 以下分别说明两种新建群组的方法。
 
 ###4.1 新建群组
@@ -75,7 +75,7 @@
 ![avatar](../images/userGuide/group/groupViewInit-cn.jpg)
 
 ###5.1 编辑群组基本信息
-点击概要下面的<u>编辑...</u>按钮，即可进入群组修改页面。
+点击页面左侧的<u>编辑...</u>按钮，即可进入群组修改页面。
 ![avatar](../images/userGuide/group/editGroupBtn-cn.jpg)
 进入群组编辑页面。
 ![avatar](../images/userGuide/group/editGroupInit-cn.jpg)
